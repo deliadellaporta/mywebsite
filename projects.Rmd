@@ -1,11 +1,40 @@
 ---
-title: "Projects"
+title: ""
 output: distill::distill_article
+listings: posts
 date: '2024-04-24'
 ---
-I have no projects yuppi 
+
+## <i class="fas fa-newspaper"></i> Publications
+
+**Della Porta, Delia**; Scheirman, Eléonore; Legrain, Valéry. Top-down attention does not modulate mechanical hypersensitivity consecutive to central sensitization: insights from an experimental analysis. PAIN ():10.1097/j.pain.0000000000003225, April 3, 2024. | DOI: 10.1097/j.pain.0000000000003225
+https://pubmed.ncbi.nlm.nih.gov/38595183/
+
+Dimitriadis, Theo, **Della Porta, Delia**; Perschl,Johanna; Evers, Andrea W.M.;Magee,Wendy L.;S.Schaefer,Rebecca.Motivation and music interventions in adults: A systematic review.Neuropsychological Rehabilitation (2023): 1-30.
+https://doi.org/10.1080/09602011.2023.2224033
+
+**Della Porta, Delia**; Vilz, Marie-Lynn; Kuzminova, Avgustina; Filbrich, Lieve; Mouraux, André; Legrain,Valéry.No evidence for an effect of selective spatial attention on the development of secondary hyperalgesia: a replication study. Frontiers in Human Neuroscience 16 (2022): 997230.https://doi.org/10.3389/fnhum.2022.997230
+
+Weng, Lingling; Peerdeman, Kaya J.; **Della Porta, Delia**; van Laarhoven, Antoinette I.M.; Evers, Andrea W.M. Can placebo and nocebo effects generalize within pain modalities and across somatosensory sensations?. PAIN 163(3):p 548-559, March 2022. | DOI: 10.1097/j.pain.0000000000002390 
+https://pubmed.ncbi.nlm.nih.gov/34232926/
+
+Peerdeman, Kaya J.; Geers, Andrew L.; **Della Porta, Delia**; Veldhuijzen, Dieuwke S.; Kirsch, Irving. Underpredicting pain: an experimental investigation into the benefits and risks. PAIN 162(7):p 2024-2035, July 2021. | DOI: 10.1097/j.pain.0000000000002199
+https://pubmed.ncbi.nlm.nih.gov/33470747/
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## <i class="fas fa-video"></i> Latest talks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

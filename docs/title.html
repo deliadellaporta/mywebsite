@@ -88,29 +88,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>My Website: </title>
+  <title>My Website: Untitled</title>
 
-  <meta property="description" itemprop="description" content="Persistent Pain| Top-down Modulation|"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="My Website: "/>
+  <meta property="og:title" content="My Website: Untitled"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Persistent Pain| Top-down Modulation|"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="My Website"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="My Website: "/>
-  <meta property="twitter:description" content="Persistent Pain| Top-down Modulation|"/>
+  <meta property="twitter:title" content="My Website: Untitled"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","title-block-banner","description","site","listing"]}},"value":[{"type":"character","attributes":{},"value":[""]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["Persistent Pain| Top-down Modulation|"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{},"value":[]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2267,12 +2264,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"","description":"Persistent Pain| Top-down Modulation|","authors":[]}
+{"title":"Untitled","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2301,204 +2298,107 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).on("load", function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      page_category = decodeURIComponent(page_category)
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-apply-limit l-page">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption=""></h1>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>index.knit</h1>
+<h1>title.knit</h1>
 
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p>Persistent Pain| Top-down Modulation|</p>
+
 </div>
 
 
 <div class="d-article">
-<div id="hero-heading">
-
+<style>
+.quarto-title-meta {
+  background-color: #f5e1eb;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: #ad0059;
+}
+.quarto-title-meta a {
+  color: #ad0059!important;
+}
+</style>
+<div class="quarto-title-meta">
+<span class="math inline">\(if(by-affiliation/first)\)</span>
+<div class="quarto-title-meta-author">
+<div class="quarto-title-meta-heading">
+<span class="math inline">\(labels.authors\)</span>
 </div>
-<h2 id="delia-della-porta">Delia Della Porta</h2>
-<div class="floatting">
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="IMG_0017.jpeg" width="45%" style="float:left; padding:20px" /></p>
+<div class="quarto-title-meta-heading">
+<span class="math inline">\(labels.affiliations\)</span>
 </div>
-<h1 id="short-bio">Short Bio</h1>
-<p>I am Delia, a PhD student at the Institute of Neuroscience (IONS) at the Université Catholique de Louvain in Brussels. My research project, supported by FNRS-FRS funding, focuses on investigating how cognitive factors, particularly attention,impact central sensitization to pain. My interests span various aspects, including chronic pain, cognitive factors such as expectations and attention, and their roles in the development and maintenance of pain disorders. Prior to my PhD, I obtained a master’s degree in Clinical Psychology and Neuropsychology from the University of Florence. Following my master’s program, I worked as a research assistant at Leiden University, collaborating on diverse projects focused on the role of verbal suggestions and conditioning to investigate pain and itch.</p>
-<p>My <strong>research interests</strong> are:</p>
-<ul>
-<li><span class="highlight-color">Experimental design</span>,</li>
-<li><span class="highlight-color">Mixed models,</span> (also known as multi-level models or hierarchical models),</li>
-<li><span class="highlight-color">Measurement and Methodology</span>,</li>
-<li><span class="highlight-color">Designing of cognitive tasks, i.e., Working Memory tasks</span></li>
-<li><span class="highlight-color">Open Science, Reproducibility</span>,</li>
-<li>Applications in <span class="highlight-color">Health Psychology</span></li>
-</ul>
-<p>I speak <strong>English</strong> and <strong>Italian</strong> fluently. I am Italian but, at the end of master I moved to the Netherlands where I actually live.</p>
-<h2 id="contact">Contact</h2>
-<div class="layout-chunk" data-layout="l-body">
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 74%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><i class="fab fa-twitter"></i></td>
-<td style="text-align: left;"><a href="https://twitter.com/deliadellaporta"><span class="citation" data-cites="deliadellaporta">@deliadellaporta</span></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><i class="fas fa-envelope"></i></td>
-<td style="text-align: left;"><a href="mailto:delia.dellaporta@uclouvain.be">delia.dellaporta@uclouvain.be</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><i class="fas fa-map-marker-alt"></i></td>
-<td style="text-align: left;">Institute of Neuroscience,IONS,UCLouvain<br>Avenue Mounier 53/B1.53.04 <br>1200 Woluwe-Saint-Lambert <br>Belgium</td>
-</tr>
-</tbody>
-</table>
+<span class="math inline">\(for(by-author)\)</span>
+<div class="quarto-title-meta-contents">
+<pre><code>$if(by-author.url)$&lt;a href=&quot;$by-author.url$&quot;&gt;$endif$$if(by-author.name.literal)$$by-author.name.literal$$endif$$if(by-author.url)$&lt;/a&gt;$endif$ $if(by-author.orcid)$&lt;a href=&quot;https://orcid.org/$by-author.orcid$&quot; class=&quot;quarto-title-author-orcid&quot;&gt; &lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==&quot;&gt;&lt;/a&gt;$endif$</code></pre>
+</div>
+<span class="math inline">\(if(by-author.affiliations)\)</span>
+<div class="quarto-title-meta-contents">
+<pre><code>$for(by-author.affiliations)$
+&lt;p class=&quot;affiliation&quot;&gt;
+  $if(it.url)$
+  &lt;a href=&quot;$it.url$&quot;&gt;
+  $endif$
+  $it.name$
+  $if(it.url)$
+  &lt;/a&gt;
+  $endif$
+&lt;/p&gt;
+$endfor$</code></pre>
+</div>
+<p><span class="math inline">\(endif\)</span>
+<span class="math inline">\(endfor\)</span></p>
+</div>
+<p><span class="math inline">\(endif\)</span></p>
+<span class="math inline">\(if(by-affiliation)\)</span>
+<span class="math inline">\(elseif(by-author)\)</span>
+<div>
+<pre><code>&lt;div class=&quot;quarto-title-meta-heading&quot;&gt;$labels.authors$&lt;/div&gt;
+&lt;div class=&quot;quarto-title-meta-contents&quot;&gt;
+  $for(by-author)$
+   &lt;p&gt;$by-author.name.literal$ $if(by-author.orcid)$&lt;a href=&quot;https://orcid.org/$by-author.orcid$&quot; class=&quot;quarto-title-author-orcid&quot;&gt; &lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==&quot;&gt;&lt;/a&gt;$endif$&lt;/p&gt;
+  $endfor$
+&lt;/div&gt;</code></pre>
+</div>
+<p><span class="math inline">\(endif\)</span></p>
+<span class="math inline">\(if(date)\)</span>
+<div>
+<pre><code>&lt;div class=&quot;quarto-title-meta-heading&quot;&gt;$labels.published$&lt;/div&gt;
+&lt;div class=&quot;quarto-title-meta-contents&quot;&gt;
+  &lt;p class=&quot;date&quot;&gt;$date$&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<p><span class="math inline">\(endif\)</span></p>
+<span class="math inline">\(if(date-modified)\)</span>
+<div>
+<pre><code>&lt;div class=&quot;quarto-title-meta-heading&quot;&gt;$labels.modified$&lt;/div&gt;
+&lt;div class=&quot;quarto-title-meta-contents&quot;&gt;
+  &lt;p class=&quot;date-modified&quot;&gt;$date-modified$&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<p><span class="math inline">\(endif\)</span></p>
+<span class="math inline">\(if(doi)\)</span>
+<div>
+<pre><code>&lt;div class=&quot;quarto-title-meta-heading&quot;&gt;$labels.doi$&lt;/div&gt;
+&lt;div class=&quot;quarto-title-meta-contents&quot;&gt;
+  &lt;p class=&quot;doi&quot;&gt;
+    &lt;a href=&quot;https://doi.org/$doi$&quot;&gt;$doi$&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<p><span class="math inline">\(endif\)</span></p>
+</div>
+<span class="math inline">\(if(abstract)\)</span>
+<div>
+<div class="abstract">
+<pre><code>&lt;div class=&quot;abstract-title&quot;&gt;$labels.abstract$&lt;/div&gt;
+$abstract$</code></pre>
 </div>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p><span class="math inline">\(endif\)</span></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2506,6 +2406,15 @@ function init_posts_list() {
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->

@@ -1,9 +1,22 @@
 ---
-title: "About this site"
-description: |
-  Some additional details about the website
+title: "Contact"
+description: 
 ---
-I like Berto and Isotta very much 
+
+
+
+
+```{r, echo = FALSE}
+df <- data.frame(what = c('<i class="fab fa-twitter"></i>',
+                           '<i class="fas fa-envelope"></i>',
+                           '<i class="fas fa-map-marker-alt"></i>'),
+                 where = c("[@deliadellaporta](https://twitter.com/deliadellaporta)",
+                           "[delia.dellaporta@uclouvain.be](mailto:delia.dellaporta@uclouvain.be)",
+                           "Institute of Neuroscience,IONS,UCLouvain<br>Avenue Mounier 53/B1.53.04 <br>1200 Woluwe-Saint-Lambert <br>Belgium"))
+knitr::kable(df, col.names = c("", ""), escape = FALSE)
+```
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```

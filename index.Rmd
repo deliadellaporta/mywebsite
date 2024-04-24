@@ -1,18 +1,51 @@
 ---
-title: "My Website"
-description: |
-  Welcome to the website. I hope you enjoy it!
+title: ""
+title-block-banner: true
+description: 'Persistent Pain| Top-down Modulation|'
 site: distill::distill_website
+listing: posts
 ---
-My Name is Delia and this is my new website 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+:::{#hero-heading}
 
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
+:::
 
-# Learn more about publishing to GitHub Pages at:
-# https://rstudio.github.io/distill/publish_website.html#github-pages
+## Delia Della Porta
+:::{.floatting}
 
+```{r out.width='45%', out.extra='style="float:left; padding:20px"', echo=FALSE}
+knitr::include_graphics("IMG_0017.jpeg")
 ```
 
+
+
+# Short Bio 
+I am Delia, a PhD student at the Institute of Neuroscience (IONS) at the Université Catholique de Louvain in Brussels. My research project, supported by FNRS-FRS funding, focuses on investigating how cognitive factors, particularly attention,impact central sensitization to pain. My interests span various aspects, including chronic pain, cognitive factors such as expectations and attention, and their roles in the development and maintenance of pain disorders. Prior to my PhD, I obtained a master's degree in Clinical Psychology and Neuropsychology from the University of Florence. Following my master's program, I worked as a research assistant at Leiden University, collaborating on diverse projects focused on the role of verbal suggestions and conditioning to investigate pain and itch.
+
+My **research interests** are:
+
+* [Experimental design]{.highlight-color},
+* [Mixed models,]{.highlight-color} (also known as multi-level models or hierarchical models),
+* [Measurement and Methodology]{.highlight-color},
+* [Designing of cognitive tasks, i.e., Working Memory tasks]{.highlight-color}
+* [Open Science, Reproducibility]{.highlight-color},
+* Applications in [Health Psychology]{.highlight-color}
+
+I speak **English** and **Italian** fluently. I am Italian but, at the end of master I moved to the Netherlands where I actually live.
+
+## Contact 
+```{r, echo = FALSE}
+df <- data.frame(what = c('<i class="fab fa-twitter"></i>',
+                           '<i class="fas fa-envelope"></i>',
+                           '<i class="fas fa-map-marker-alt"></i>'),
+                 where = c("[@deliadellaporta](https://twitter.com/deliadellaporta)",
+                           "[delia.dellaporta@uclouvain.be](mailto:delia.dellaporta@uclouvain.be)",
+                           "Institute of Neuroscience,IONS,UCLouvain<br>Avenue Mounier 53/B1.53.04 <br>1200 Woluwe-Saint-Lambert <br>Belgium"))
+knitr::kable(df, col.names = c("", ""), escape = FALSE)
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+:::
