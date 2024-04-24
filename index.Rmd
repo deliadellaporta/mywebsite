@@ -30,7 +30,7 @@ My **research interests** are:
 * [Open Science, Reproducibility]{.highlight-color},
 * Applications in [Health Psychology]{.highlight-color}
 
-I speak **English** and **Italian** fluently. I am Italian but, at the end of my master I moved to the Netherlands where I currently live. 
+I speak **English** and **Italian** fluently. I am Italian but, at the end of my master's degree I moved to the Netherlands where I currently live. 
 
 ## Contact 
 ```{r, echo = FALSE}
