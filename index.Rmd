@@ -1,7 +1,7 @@
 ---
 title: ""
 title-block-banner: true
-description: 'Persistent Pain| Top-down Modulation|'
+description: 
 site: distill::distill_website
 listing: posts
 ---
@@ -30,7 +30,7 @@ My **research interests** are:
 * [Open Science, Reproducibility]{.highlight-color},
 * Applications in [Health Psychology]{.highlight-color}
 
-I speak **English** and **Italian** fluently. I am Italian but, at the end of master I moved to the Netherlands where I actually live.
+I speak **English** and **Italian** fluently. I am Italian but, at the end of my master I moved to the Netherlands where I currently live. 
 
 ## Contact 
 ```{r, echo = FALSE}
