@@ -28,7 +28,7 @@ My **research interests** are:
 * [Measurement and Methodology]{.highlight-color},
 * [Designing of cognitive tasks, i.e., Working Memory tasks]{.highlight-color}
 * [Open Science, Reproducibility]{.highlight-color},
-* [Pre-registrations](https://osf.io/profile/)( following the link you can find all my projects including R scripts for sample size calculations and for follow-up analysis,DATA collected and more) {.highlight-color},
+* [Pre-registrations](https://osf.io/profile/)( following the link you can find all my projects including R scripts for sample size calculations and for follow-up analysis,DATA collected and more),
 * Applications in [Health Psychology]{.highlight-color}
 
 I speak **English** and **Italian** fluently. I am Italian but, at the end of my master's degree I moved to the Netherlands where I currently live. 

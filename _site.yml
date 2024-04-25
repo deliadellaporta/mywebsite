@@ -16,5 +16,7 @@ navbar:
       href: mailto:delia.dellaporta@uclouvain.be
     - icon: fab fa-google
       href: https://scholar.google.com/citations?user=GrJbx4sAAAAJ&hl=en&oi=ao
+    - icon: fab fa-linkedin
+      href: https://www.linkedin.com/in/delia-della-porta-879268171/
 
 output: distill::distill_article
