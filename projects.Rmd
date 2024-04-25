@@ -7,41 +7,55 @@ date: '2024-04-24'
 
 ## <i class="fas fa-newspaper"></i> Publications
 
-**Della Porta, Delia**; Scheirman, Eléonore; Legrain, Valéry. Top-down attention does not modulate mechanical hypersensitivity consecutive to central sensitization: insights from an experimental analysis. PAIN ():10.1097/j.pain.0000000000003225, April 3, 2024. | DOI: 10.1097/j.pain.0000000000003225
+* **Della Porta, Delia**; Scheirman, Eléonore; Legrain, Valéry. Top-down attention does not modulate mechanical hypersensitivity consecutive to central sensitization: insights from an experimental analysis. PAIN ():10.1097/j.pain.0000000000003225, April 3, 2024. | DOI: 10.1097/j.pain.0000000000003225
 https://pubmed.ncbi.nlm.nih.gov/38595183/
 
-Dimitriadis, Theo, **Della Porta, Delia**; Perschl,Johanna; Evers, Andrea W.M.;Magee,Wendy L.;S.Schaefer,Rebecca.Motivation and music interventions in adults: A systematic review.Neuropsychological Rehabilitation (2023): 1-30.
+* Dimitriadis, Theo, **Della Porta, Delia**; Perschl,Johanna; Evers, Andrea W.M.;Magee,Wendy L.;S.Schaefer,Rebecca.Motivation and music interventions in adults: A systematic review.Neuropsychological Rehabilitation (2023): 1-30.
 https://doi.org/10.1080/09602011.2023.2224033
 
-**Della Porta, Delia**; Vilz, Marie-Lynn; Kuzminova, Avgustina; Filbrich, Lieve; Mouraux, André; Legrain,Valéry.No evidence for an effect of selective spatial attention on the development of secondary hyperalgesia: a replication study. Frontiers in Human Neuroscience 16 (2022): 997230.https://doi.org/10.3389/fnhum.2022.997230
+* **Della Porta, Delia**; Vilz, Marie-Lynn; Kuzminova, Avgustina; Filbrich, Lieve; Mouraux, André; Legrain,Valéry.No evidence for an effect of selective spatial attention on the development of secondary hyperalgesia: a replication study. Frontiers in Human Neuroscience 16 (2022): 997230.https://doi.org/10.3389/fnhum.2022.997230
 
-Weng, Lingling; Peerdeman, Kaya J.; **Della Porta, Delia**; van Laarhoven, Antoinette I.M.; Evers, Andrea W.M. Can placebo and nocebo effects generalize within pain modalities and across somatosensory sensations?. PAIN 163(3):p 548-559, March 2022. | DOI: 10.1097/j.pain.0000000000002390 
+* Weng, Lingling; Peerdeman, Kaya J.; **Della Porta, Delia**; van Laarhoven, Antoinette I.M.; Evers, Andrea W.M. Can placebo and nocebo effects generalize within pain modalities and across somatosensory sensations?. PAIN 163(3):p 548-559, March 2022. | DOI: 10.1097/j.pain.0000000000002390 
 https://pubmed.ncbi.nlm.nih.gov/34232926/
 
-Peerdeman, Kaya J.; Geers, Andrew L.; **Della Porta, Delia**; Veldhuijzen, Dieuwke S.; Kirsch, Irving. Underpredicting pain: an experimental investigation into the benefits and risks. PAIN 162(7):p 2024-2035, July 2021. | DOI: 10.1097/j.pain.0000000000002199
+* Peerdeman, Kaya J.; Geers, Andrew L.; **Della Porta, Delia**; Veldhuijzen, Dieuwke S.; Kirsch, Irving. Underpredicting pain: an experimental investigation into the benefits and risks. PAIN 162(7):p 2024-2035, July 2021. | DOI: 10.1097/j.pain.0000000000002199
 https://pubmed.ncbi.nlm.nih.gov/33470747/
 
 
-## <i class="fas fa-video"></i> CONFERENCES
+## <i class="fas fa-video"></i> Conferences
 
 
-**Oral presentation at the 13th congress of the European Pain Federation, EFIC**, September 2023,Budapest,(Hungary);Title: Top-down attentional modulation does not affect the development of secondary hyperalgesia: an experimental investigation
+* **Symposium presenter for the IoNS Special Interest Group [SIG](https://www.nocions.org/sig-pain?pgid=ltzhdnr6-yves-de-koninck_2) Translational Pain Research**, October 2023, Brussels (Belgium);
+Title: Examining the influence of selective attention on the development of secondary hyperalgesia 
+Other speakers: Dr Roberta Gualdani (UCLouvain); Dr. Yves De Koninck (Université de Laval); Pauline Beckers (UCLouvain); Dr Giulia Liberati (UCLouvain)
 
-**Oral presentation at the 46th annual meeting of the Japan Neuroscience society, JNS**, August 2023, Sendai (Japan); Title: Top-down attentional modulation does not affect the development of secondary hyperalgesia: an experimental investigation
+* **Poster presentation at the Pain Research Meeting, PRM**, September 2023, Ghent (Belgium); 
+Title: Top-down attentional modulation does not affect the development of secondary hyperalgesia: an experimental investigation
 
-**Poster presentation at the 10th MindBrainBody Symposium 2023**, March 2023, Berlin (Germany); Title: Top-down attentional modulation does not affect the development of secondary hyperalgesia: an experimental investigation
+* **Oral presentation at the 13th congress of the European Pain Federation, EFIC**, September 2023, Budapest (Hungary);
+Title: Top-down attentional modulation does not affect the development of secondary hyperalgesia: an experimental investigation
 
-**Symposium organizer and presenter at the International Convention of Psychological Science, ICPS** March 2023 Brussels, (Belgium); Title: Understanding the Role of Psychological Factors in Pain Amplification: Insights from Experimental and Clinical Research. Other speakers: Dr. Emanuele Maria Giusti, Dr. Inge Timmers, MSc Elke Meyers, Dr. Emanuel van den Broek
+* **Oral presentation at the 46th annual meeting of the Japan Neuroscience society, JNS**, August 2023, Sendai (Japan); 
+Title: Top-down attentional modulation does not affect the development of secondary hyperalgesia: an experimental investigation
 
-**Oral presentation at the 12th congress of the European Pain Federation, EFIC**,April 2022 in Dublin (Ireland); Title: No evidence for an effect of selective spatial attention on the development of secondary hyperalgesia: A replication study.
-Award: Best oral poster presentation in basic research at the [EFIC 2022](https://www.youtube.com/watch?v=EQ_taTd4o8w)
+* **Poster presentation at the 10th MindBrainBody Symposium 2023**, March 2023, Berlin (Germany); 
+Title: Top-down attentional modulation does not affect the development of secondary hyperalgesia: an experimental investigation
 
-**Poster and oral presentation at the the European Graduate School of Neuroscience, EURON**,February 2022 in Hasselt (Belgium); Title: No evidence for an effect of selective spatial attention on the development of secondary hyperalgesia: A replication study
+* **Symposium organizer and presenter at the International Convention of Psychological Science, ICPS**, March 2023, Brussels (Belgium);
+Title: Understanding the Role of Psychological Factors in Pain Amplification: Insights from Experimental and Clinical Research. 
+Other speakers: Dr. Emanuele Maria Giusti (Catholic University of Milan), Dr. Inge Timmers(Tilburg Univeristy), MSc Elke Meyers (Leuven Univeristy), Dr. Emanuel van den Broek (Leuven Univeristy)
 
-**Poster presentation at the Association for Psychological Science, APS Annual Convention**, May 2022 Chicago (Illinois); Title: No evidence for an effect of selective spatial attention on the development of secondary hyperalgesia: A replication study
+* **Oral presentation at the 12th congress of the European Pain Federation, EFIC**, April 2022, Dublin (Ireland); 
+Title: No evidence for an effect of selective spatial attention on the development of secondary hyperalgesia: A replication study.
+**Award**: Best oral poster presentation in basic research at the [EFIC 2022](https://www.youtube.com/watch?v=EQ_taTd4o8w)
 
+* **Poster presentation at the Association for Psychological Science, APS Annual Convention**, May 2022 Chicago (Illinois); Title: No evidence for an effect of selective spatial attention on the development of secondary hyperalgesia: A replication study
 
+* **Poster and oral presentation at the European Graduate School of Neuroscience, EURON**, February 2022 in Hasselt (Belgium); Title: No evidence for an effect of selective spatial attention on the development of secondary hyperalgesia: A replication study
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
 
 
 
